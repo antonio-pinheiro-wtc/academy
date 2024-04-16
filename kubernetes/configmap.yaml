@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: stand-configmap
+data:
+  price.tax.boost: "true"
+  quarkus.datasource.jdbc.url: "jdbc:postgresql://some-postgres:5432/postgres"

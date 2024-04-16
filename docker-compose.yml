@@ -1,0 +1,12 @@
+services:
+  some-postgres:
+    image: postgres
+    environment:
+      - POSTGRES_USER=academy
+      - POSTGRES_PASSWORD=academy
+    ports:
+      - 5432:5432
+  app:
+    build: .
+    ports:
+      - 8080:8080
