@@ -7,4 +7,4 @@ runs:
       run: docker build . --file Dockerfile --tag academy:$(date +%s)
     - name: List Docker Images
       run: docker images
-  shell: bash
+shell: bash
