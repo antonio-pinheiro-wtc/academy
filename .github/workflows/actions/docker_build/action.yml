@@ -4,7 +4,9 @@ runs:
   using: "composite"
   steps:
     - name: Build the Docker image
+      shell: bash
       run: docker build . --file Dockerfile --tag academy:$(date +%s)
     - name: List Docker Images
       run: docker images
-shell: bash
+      shell: bash
+
