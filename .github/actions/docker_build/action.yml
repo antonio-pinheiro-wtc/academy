@@ -17,7 +17,11 @@ runs:
       shell: bash
       run: |
         DOCKERTAG=$docker_tag
+        echo "x"
+        echo $docker_tag
+        echo "y"
         if [ -z "$docker_tag" ]; then
+          echo "z"
           DOCKERTAG=$(date +%s)
         fi
 
