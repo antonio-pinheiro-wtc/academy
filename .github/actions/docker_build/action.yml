@@ -18,6 +18,6 @@ runs:
       run: |
         if [ -z "$var" ]; then
           docker_tag = $(date +%s)
+        fi
 
         docker build . --file Dockerfile --tag academy:$(docker_tag)
-
