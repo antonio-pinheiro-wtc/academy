@@ -17,7 +17,7 @@ runs:
       shell: bash
       run: |
         if [ -z "$docker_tag" ]; then
-          docker_tag=$(date +%s)
+          DOCKER_TAG=$(date +%s)
         fi
 
         docker build . --file Dockerfile --tag academy:$(docker_tag)
