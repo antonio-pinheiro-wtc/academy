@@ -1,13 +1,23 @@
 name: 'Hello World'
 description: 'Greet someone'
+inputs:
+  docker_file_name:  # id of input
+    description: 'Who to greet'
+    required: true
+  image_name:
+    description: "sda"
+    required: true
+  docker_tag:
+    description: "dasd"
+    required: false
 runs:
   using: "composite"
   steps:
     - name: Build the Docker image
       shell: bash
-      run: docker build . --file Dockerfile --tag academy:$(date +%s)
-    - name: List Docker Images
-      run: docker images
-      shell: bash
+      run: |
+        if [ -z "$var" ]
+          docker_tag = $(date +%s)
 
+        docker build . --file Dockerfile --tag academy:$(docker_tag)
 
