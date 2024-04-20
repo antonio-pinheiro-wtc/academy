@@ -20,4 +20,4 @@ runs:
           DOCKERTAG=$(date +%s)
         fi
 
-        docker build . --file Dockerfile --tag academy:$(DOCKERTAG)
+        docker build . --file Dockerfile --tag academy:$DOCKERTAG
