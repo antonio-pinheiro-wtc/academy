@@ -16,11 +16,11 @@ runs:
     - name: Build the Docker image
       shell: bash
       run: |
-        DOCKERTAG=$docker_tag
+        DOCKERTAG=${{ inputs.docker_tag }}
         echo "x"
         echo $docker_tag
         echo "y"
-        if [ -z "$docker_tag" ]; then
+        if [ -z "${{ inputs.docker_tag }}" ]; then
           echo "z"
           DOCKERTAG=$(date +%s)
         fi
