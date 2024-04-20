@@ -16,6 +16,7 @@ runs:
     - name: Build the Docker image
       shell: bash
       run: |
+        DOCKERTAG=$docker_tag
         if [ -z "$docker_tag" ]; then
           DOCKERTAG=$(date +%s)
         fi
